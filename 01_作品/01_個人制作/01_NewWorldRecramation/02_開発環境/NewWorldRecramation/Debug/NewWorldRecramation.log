@@ -1,0 +1,26 @@
+﻿  map.cpp
+  enemy.cpp
+c:\users\student\documents\visual studio 2015\projects\windowsapp\newworldrecramation\enemy.cpp(552): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+c:\users\student\documents\visual studio 2015\projects\windowsapp\newworldrecramation\enemy.cpp(556): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+  コードを生成中...
+  スキップ中... (関連する変更は検出されませんでした)
+  title.cpp
+  timer.cpp
+  selectstage.cpp
+  score.cpp
+  result.cpp
+  ranking.cpp
+  progressbar.cpp
+  player.cpp
+  particle.cpp
+  main.cpp
+  item.cpp
+  hpenestat.cpp
+  game.cpp
+  file.cpp
+  ending.cpp
+  damagezone.cpp
+  bullet.cpp
+  bg.cpp
+  NewWorldRecramation.vcxproj -> C:\Users\student\Documents\Visual Studio 2015\Projects\windowsapp\NewWorldRecramation\Debug\NewWorldRecramation.exe
+  NewWorldRecramation.vcxproj -> C:\Users\student\Documents\Visual Studio 2015\Projects\windowsapp\NewWorldRecramation\Debug\NewWorldRecramation.pdb (Full PDB)

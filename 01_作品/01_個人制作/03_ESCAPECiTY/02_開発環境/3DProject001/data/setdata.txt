@@ -1,0 +1,180 @@
+#==============================================================================
+#
+# 配置情報スクリプトファイル [setdata.txt]
+# Author : 石原颯馬（ベース）
+#
+#==============================================================================
+SCRIPT			#読み込み開始
+
+#============================
+# 敵配置
+#============================
+SETENEMY
+	POS = -800 0 -720
+	ROT = 0 -90 0
+	NAMEIDX = 0
+	LIFE = 2
+END_SETENEMY
+
+SETENEMY
+	POS = -960 0 -480
+	ROT = 0 0 0
+	NAMEIDX = 0
+	LIFE = 3
+END_SETENEMY
+
+SETENEMY
+	POS = -920 0 -480
+	ROT = 0 0 0
+	NAMEIDX = 0
+	LIFE = 3
+END_SETENEMY
+
+SETENEMY
+	POS = -960 0 0
+	ROT = 0 0 0
+	NAMEIDX = 0
+	LIFE = 3
+END_SETENEMY
+
+SETENEMY
+	POS = -1000 0 0
+	ROT = 0 0 0
+	NAMEIDX = 0
+	LIFE = 3
+END_SETENEMY
+
+SETENEMY
+	POS = -440 0 240
+	ROT = 0 180 0
+	NAMEIDX = 0
+	LIFE = 3
+END_SETENEMY
+
+SETENEMY
+	POS = -480 0 240
+	ROT = 0 180 0
+	NAMEIDX = 0
+	LIFE = 3
+END_SETENEMY
+
+SETENEMY
+	POS = -520 0 240
+	ROT = 0 180 0
+	NAMEIDX = 0
+	LIFE = 3
+END_SETENEMY
+
+SETENEMY
+	POS = 0 0 -240
+	ROT = 0 -90 0
+	NAMEIDX = 0
+	LIFE = 3
+END_SETENEMY
+
+SETENEMY
+	POS = 960 0 -480
+	ROT = 0 0 0
+	NAMEIDX = 0
+	LIFE = 4
+END_SETENEMY
+
+SETENEMY
+	POS = 920 0 -480
+	ROT = 0 0 0
+	NAMEIDX = 0
+	LIFE = 4
+END_SETENEMY
+
+SETENEMY
+	POS = 1000 0 -240
+	ROT = 0 0 0
+	NAMEIDX = 0
+	LIFE = 5
+END_SETENEMY
+
+SETENEMY
+	POS = 960 0 -240
+	ROT = 0 0 0
+	NAMEIDX = 0
+	LIFE = 1
+END_SETENEMY
+
+SETENEMY
+	POS = 920 0 -240
+	ROT = 0 0 0
+	NAMEIDX = 0
+	LIFE = 5
+END_SETENEMY
+
+SETENEMY
+	POS = 1000 0 240
+	ROT = 0 0 0
+	NAMEIDX = 0
+	LIFE = 5
+END_SETENEMY
+
+SETENEMY
+	POS = 960 0 240
+	ROT = 0 0 0
+	NAMEIDX = 0
+	LIFE = 5
+END_SETENEMY
+
+SETENEMY
+	POS = 920 0 240
+	ROT = 0 0 0
+	NAMEIDX = 0
+	LIFE = 1
+END_SETENEMY
+
+SETENEMY
+	POS = 1000 0 640
+	ROT = 0 0 0
+	NAMEIDX = 0
+	LIFE = 4
+END_SETENEMY
+
+SETENEMY
+	POS = 960 0 640
+	ROT = 0 0 0
+	NAMEIDX = 0
+	LIFE = 4
+END_SETENEMY
+
+SETENEMY
+	POS = -60 0 640
+	ROT = 0 0 0
+	NAMEIDX = 0
+	LIFE = 5
+END_SETENEMY
+
+SETENEMY
+	POS = 0 0 640
+	ROT = 0 0 0
+	NAMEIDX = 0
+	LIFE = 5
+END_SETENEMY
+
+SETENEMY
+	POS = 60 0 640
+	ROT = 0 0 0
+	NAMEIDX = 0
+	LIFE = 5
+END_SETENEMY
+
+SETENEMY
+	POS = -30 0 620
+	ROT = 0 0 0
+	NAMEIDX = 0
+	LIFE = 5
+END_SETENEMY
+
+SETENEMY
+	POS = 30 0 620
+	ROT = 0 0 0
+	NAMEIDX = 0
+	LIFE = 5
+END_SETENEMY
+
+END_SCRIPT		#スクリプト終了

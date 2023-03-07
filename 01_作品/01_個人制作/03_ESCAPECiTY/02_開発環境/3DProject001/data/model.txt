@@ -1,0 +1,1043 @@
+#==============================================================================
+#
+# 『モデルビューワ』スクリプトファイル [model.txt]
+# Author : AKIRA TANAKA（ベース）,石原颯馬（改変）
+#
+#==============================================================================
+SCRIPT			# この行は絶対消さないこと！
+
+#------------------------------------------------------------------------------
+# テクスチャ数
+#------------------------------------------------------------------------------
+NUM_TEXTURE = 6
+
+#------------------------------------------------------------------------------
+# テクスチャファイル名
+#------------------------------------------------------------------------------
+TEXTURE_FILENAME = data/TEXTURE/sky000.jpg			# [0]空テクスチャ
+TEXTURE_FILENAME = data/TEXTURE/mountain000.png		# [1]山テクスチャ
+TEXTURE_FILENAME = data/TEXTURE/field003.jpg		# [2]地面テクスチャ
+TEXTURE_FILENAME = data/TEXTURE/wall100.jpg			# [3]壁テクスチャ
+TEXTURE_FILENAME = data/TEXTURE/tree000.png			# [4]木テクスチャ
+TEXTURE_FILENAME = data/TEXTURE/effect000.jpg		# [5]エフェクトテクスチャ
+
+#------------------------------------------------------------------------------
+# モデル数
+#------------------------------------------------------------------------------
+NUM_MODEL = 15
+
+#------------------------------------------------------------------------------
+# モデルファイル名
+#------------------------------------------------------------------------------
+MODEL_FILENAME = data/MODEL/stone000.x				# [0]岩(小)
+MODEL_FILENAME = data/MODEL/stone001.x				# [1]岩(中)
+MODEL_FILENAME = data/MODEL/stone002.x				# [2]岩(大)
+MODEL_FILENAME = data/MODEL/wall000.x				# [3]岩壁(小)
+MODEL_FILENAME = data/MODEL/wall001.x				# [4]岩壁(中)
+MODEL_FILENAME = data/MODEL/wall002.x				# [5]岩壁(大)
+MODEL_FILENAME = data/MODEL/debris000.x				# [6]鉄骨ガレキ(小)
+MODEL_FILENAME = data/MODEL/debris001.x				# [7]鉄骨ガレキ(中)
+MODEL_FILENAME = data/MODEL/debris002.x				# [8]鉄骨ガレキ(大)
+MODEL_FILENAME = data/MODEL/debris100.x				# [9]板ガレキ(小)
+MODEL_FILENAME = data/MODEL/debris101.x				# [10]板ガレキ(中)
+MODEL_FILENAME = data/MODEL/debris102.x				# [11]板ガレキ(大)
+MODEL_FILENAME = data/MODEL/pillar000.x				# [12]柱(小)
+MODEL_FILENAME = data/MODEL/pillar001.x				# [13]柱(中)
+MODEL_FILENAME = data/MODEL/pillar002.x				# [14]柱(大)
+
+#------------------------------------------------------------------------------
+# カメラ情報
+#------------------------------------------------------------------------------
+CAMERASET
+	POS = 0.0 180.0 -720.0			# 視点
+	REF = 0.0 0.0 0.0				# 注視点
+END_CAMERASET
+
+#------------------------------------------------------------------------------
+# ライト情報
+#------------------------------------------------------------------------------
+LIGHTSET
+	DIRECTION = 0.22 -0.87 0.44		# 方向
+	DIFFUSE = 1.0 1.0 1.0			# 拡散光
+END_LIGHTSET
+
+LIGHTSET
+	DIRECTION = -0.18 0.88 -0.44	# 方向
+	DIFFUSE = 0.65 0.65 0.65		# 拡散光
+END_LIGHTSET
+
+LIGHTSET
+	DIRECTION = 0.89 -0.11 0.44		# 方向
+	DIFFUSE = 0.15 0.15 0.15		# 拡散光
+END_LIGHTSET
+
+#------------------------------------------------------------------------------
+# 空情報
+#------------------------------------------------------------------------------
+SKYSET
+	TEXTYPE = 0
+	MOVE = 0.00002
+END_SKYSET
+
+#------------------------------------------------------------------------------
+# 山情報
+#------------------------------------------------------------------------------
+MOUNTAINSET
+	TEXTYPE = 1
+END_MOUNTAINSET
+
+#------------------------------------------------------------------------------
+# 地面情報
+#------------------------------------------------------------------------------
+FIELDSET
+	TEXTYPE = 2
+	POS = 0 0 0
+	ROT = 0 0 0
+	BLOCK = 16 16
+	SIZE = 80 80
+END_FIELDSET
+
+#------------------------------------------------------------------------------
+# 壁情報
+#------------------------------------------------------------------------------
+WALLSET
+	TEXTYPE = 3
+	POS = 0 -80 640
+	ROT = 0 180 0
+	BLOCK = 16 1
+	SIZE = 80 80
+END_WALLSET
+
+WALLSET
+	TEXTYPE = 3
+	POS = 640 -80 0
+	ROT = 0 270 0
+	BLOCK = 16 1
+	SIZE = 80 80
+END_WALLSET
+
+WALLSET
+	TEXTYPE = 3
+	POS = 0 -80 -640
+	ROT = 0 0 0
+	BLOCK = 16 1
+	SIZE = 80 80
+END_WALLSET
+
+WALLSET
+	TEXTYPE = 3
+	POS = -640 -80 0
+	ROT = 0 90 0
+	BLOCK = 16 1
+	SIZE = 80 80
+END_WALLSET
+
+
+#------------------------------------------------------------------------------
+# モデル配置情報
+#------------------------------------------------------------------------------
+#----------------------------------------------
+# スタート（情ビ）・ゴール（地下鉄入口）
+#----------------------------------------------
+#---JOBI---
+MODELSET
+	TYPE = 0
+	POS = -300 0 -840
+	ROT = 0 180 0
+END_MODELSET
+
+#---SUBWAY---
+MODELSET
+	TYPE = 1
+	POS = 120 0 880
+	ROT = 0 90 0
+END_MODELSET
+#----------------------------------------------
+# 障害物
+#----------------------------------------------
+#---------------------------------
+# ブロック1
+#---------------------------------
+MODELSET
+	TYPE = 2
+	POS = -960 0 880
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 2
+	POS = -480 0 880
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 2
+	POS = 480 0 880
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 2
+	POS = 960 0 880
+	ROT = 0 0 0
+END_MODELSET
+
+#---------------------------------
+# ブロック2
+#---------------------------------
+MODELSET
+	TYPE = 2
+	POS = -1120 0 720
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 2
+	POS = -320 0 720
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 2
+	POS = -160 0 720
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 2
+	POS = 160 0 720
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 2
+	POS = 320 0 720
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 2
+	POS = 1120 0 720
+	ROT = 0 0 0
+END_MODELSET
+
+#---------------------------------
+# ブロック3
+#---------------------------------
+MODELSET
+	TYPE = 2
+	POS = -1120 0 240
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 2
+	POS = -800 0 240
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 2
+	POS = -640 0 240
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 2
+	POS = -320 0 240
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 2
+	POS = -160 0 240
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 2
+	POS = 640 0 240
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 2
+	POS = 800 0 240
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 2
+	POS = 1120 0 240
+	ROT = 0 0 0
+END_MODELSET
+
+#---------------------------------
+# ブロック4
+#---------------------------------
+MODELSET
+	TYPE = 2
+	POS = 0 0 80
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 2
+	POS = 0 0 -80
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 2
+	POS = 480 0 80
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 2
+	POS = 480 0 -80
+	ROT = 0 0 0
+END_MODELSET
+
+#---------------------------------
+# ブロック5
+#---------------------------------
+MODELSET
+	TYPE = 2
+	POS = -1120 0 -240
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 2
+	POS = -800 0 -240
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 2
+	POS = -640 0 -240
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 2
+	POS = 640 0 -240
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 2
+	POS = 800 0 -240
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 2
+	POS = 1120 0 -240
+	ROT = 0 0 0
+END_MODELSET
+
+#---------------------------------
+# ブロック6
+#---------------------------------
+MODELSET
+	TYPE = 2
+	POS = -480 0 -400
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 2
+	POS = -480 0 -560
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 2
+	POS = 0 0 -400
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 2
+	POS = 0 0 -560
+	ROT = 0 0 0
+END_MODELSET
+
+#---------------------------------
+# ブロック7
+#---------------------------------
+MODELSET
+	TYPE = 2
+	POS = -1120 0 -720
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 2
+	POS = 160 0 -720
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 2
+	POS = 320 0 -720
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 2
+	POS = 1120 0 -720
+	ROT = 0 0 0
+END_MODELSET
+
+#---------------------------------
+# ブロック8
+#---------------------------------
+MODELSET
+	TYPE = 2
+	POS = -960 0 -880
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 2
+	POS = 480 0 -880
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 2
+	POS = 960 0 -880
+	ROT = 0 0 0
+END_MODELSET
+
+#----------------------------------------------
+# ビル
+#----------------------------------------------
+#---------------------------------
+# ブロック1
+#---------------------------------
+#------------------
+# 1-1
+#------------------
+MODELSET
+	TYPE = 14
+	POS = -1200 0 960
+	ROT = 0 0 0
+END_MODELSET
+
+#------------------
+# 2-1
+#------------------
+MODELSET
+	TYPE = 17
+	POS = -720 0 960
+	ROT = 0 0 0
+END_MODELSET
+
+#------------------
+# 3-1
+#------------------
+MODELSET
+	TYPE = 16
+	POS = -240 0 960
+	ROT = 0 0 0
+END_MODELSET
+
+#------------------
+# 4-1
+#------------------
+#<--SUBWAY-->
+
+#------------------
+# 5-1
+#------------------
+MODELSET
+	TYPE = 18
+	POS = 720 0 960
+	ROT = 0 0 0
+END_MODELSET
+
+#------------------
+# 6-1
+#------------------
+MODELSET
+	TYPE = 15
+	POS = 1200 0 960
+	ROT = 0 0 0
+END_MODELSET
+
+#---------------------------------
+# ブロック2
+#---------------------------------
+#------------------
+# 1-2
+#------------------
+MODELSET
+	TYPE = 13
+	POS = -1200 0 480
+	ROT = 0 0 0
+END_MODELSET
+
+#------------------
+# 2-2
+#------------------
+MODELSET
+	TYPE = 16
+	POS = -720 0 480
+	ROT = 0 0 0
+END_MODELSET
+
+#------------------
+# 3-2
+#------------------
+MODELSET
+	TYPE = 18
+	POS = -240 0 480
+	ROT = 0 0 0
+END_MODELSET
+
+#------------------
+# 4-2
+#------------------
+MODELSET
+	TYPE = 15
+	POS = 240 0 480
+	ROT = 0 0 0
+END_MODELSET
+
+#------------------
+# 5-2
+#------------------
+MODELSET
+	TYPE = 17
+	POS = 720 0 480
+	ROT = 0 0 0
+END_MODELSET
+
+#------------------
+# 6-2
+#------------------
+MODELSET
+	TYPE = 18
+	POS = 1200 0 480
+	ROT = 0 0 0
+END_MODELSET
+
+#---------------------------------
+# ブロック3
+#---------------------------------
+#------------------
+# 1-3
+#------------------
+MODELSET
+	TYPE = 14
+	POS = -1200 0 0
+	ROT = 0 0 0
+END_MODELSET
+
+#------------------
+# 2-3
+#------------------
+MODELSET
+	TYPE = 15
+	POS = -720 0 0
+	ROT = 0 0 0
+END_MODELSET
+
+#------------------
+# 3-3
+#------------------
+MODELSET
+	TYPE = 17
+	POS = -240 0 0
+	ROT = 0 0 0
+END_MODELSET
+
+#------------------
+# 4-3
+#------------------
+MODELSET
+	TYPE = 13
+	POS = 240 0 0
+	ROT = 0 0 0
+END_MODELSET
+
+#------------------
+# 5-3
+#------------------
+MODELSET
+	TYPE = 14
+	POS = 720 0 0
+	ROT = 0 0 0
+END_MODELSET
+
+#------------------
+# 6-3
+#------------------
+MODELSET
+	TYPE = 17
+	POS = 1200 0 0
+	ROT = 0 0 0
+END_MODELSET
+
+#---------------------------------
+# ブロック4
+#---------------------------------
+#------------------
+# 1-4
+#------------------
+MODELSET
+	TYPE = 16
+	POS = -1200 0 -480
+	ROT = 0 0 0
+END_MODELSET
+
+#------------------
+# 2-4
+#------------------
+MODELSET
+	TYPE = 17
+	POS = -720 0 -480
+	ROT = 0 0 0
+END_MODELSET
+
+#------------------
+# 3-4
+#------------------
+MODELSET
+	TYPE = 14
+	POS = -240 0 -480
+	ROT = 0 0 0
+END_MODELSET
+
+#------------------
+# 4-4
+#------------------
+MODELSET
+	TYPE = 18
+	POS = 240 0 -480
+	ROT = 0 0 0
+END_MODELSET
+
+#------------------
+# 5-4
+#------------------
+MODELSET
+	TYPE = 13
+	POS = 720 0 -480
+	ROT = 0 0 0
+END_MODELSET
+
+#------------------
+# 6-4
+#------------------
+MODELSET
+	TYPE = 16
+	POS = 1200 0 -480
+	ROT = 0 0 0
+END_MODELSET
+
+#---------------------------------
+# ブロック5
+#---------------------------------
+#------------------
+# 1-5
+#------------------
+MODELSET
+	TYPE = 15
+	POS = -1200 0 -960
+	ROT = 0 0 0
+END_MODELSET
+
+#------------------
+# 2-5
+#------------------
+MODELSET
+	TYPE = 18
+	POS = -720 0 -960
+	ROT = 0 0 0
+END_MODELSET
+
+#------------------
+# 3-5
+#------------------
+#<--JOBI-->
+
+#------------------
+# 4-5
+#------------------
+MODELSET
+	TYPE = 13
+	POS = 240 0 -960
+	ROT = 0 0 0
+END_MODELSET
+
+#------------------
+# 5-5
+#------------------
+MODELSET
+	TYPE = 15
+	POS = 720 0 -960
+	ROT = 0 0 0
+END_MODELSET
+
+#------------------
+# 6-5
+#------------------
+MODELSET
+	TYPE = 17
+	POS = 1200 0 -960
+	ROT = 0 0 0
+END_MODELSET
+
+
+
+#------------------------------------------------------------------------------
+# ビルボード配置情報
+#------------------------------------------------------------------------------
+#>>******************** [ここからコメントアウト] ********************
+#------------------
+# 林奥側
+#------------------
+BILLBOARDSET
+	TEXTYPE = 4
+	POS = -500 0 620
+	SIZE = 120 220
+	ORIGIN = 60 0
+END_BILLBOARDSET
+
+BILLBOARDSET
+	TEXTYPE = 4
+	POS = -400 0 610
+	SIZE = 120 240
+	ORIGIN = 60 0
+END_BILLBOARDSET
+
+BILLBOARDSET
+	TEXTYPE = 4
+	POS = -300 0 635
+	SIZE = 120 240
+	ORIGIN = 60 0
+END_BILLBOARDSET
+
+BILLBOARDSET
+	TEXTYPE = 4
+	POS = -200 0 600
+	SIZE = 140 260
+	ORIGIN = 70 0
+END_BILLBOARDSET
+
+BILLBOARDSET
+	TEXTYPE = 4
+	POS = -100 0 600
+	SIZE = 130 230
+	ORIGIN = 65 0
+END_BILLBOARDSET
+
+BILLBOARDSET
+	TEXTYPE = 4
+	POS = 0 0 620
+	SIZE = 120 240
+	ORIGIN = 60 0
+END_BILLBOARDSET
+
+BILLBOARDSET
+	TEXTYPE = 4
+	POS = 100 0 625
+	SIZE = 110 230
+	ORIGIN = 55 0
+END_BILLBOARDSET
+
+BILLBOARDSET
+	TEXTYPE = 4
+	POS = 200 0 610
+	SIZE = 130 250
+	ORIGIN = 65 0
+END_BILLBOARDSET
+
+BILLBOARDSET
+	TEXTYPE = 4
+	POS = 300 0 600
+	SIZE = 120 240
+	ORIGIN = 60 0
+END_BILLBOARDSET
+
+BILLBOARDSET
+	TEXTYPE = 4
+	POS = 400 0 600
+	SIZE = 130 260
+	ORIGIN = 65 0
+END_BILLBOARDSET
+
+BILLBOARDSET
+	TEXTYPE = 4
+	POS = 500 0 600
+	SIZE = 120 240
+	ORIGIN = 60 0
+END_BILLBOARDSET
+
+#------------------
+# 林右側
+#------------------
+BILLBOARDSET
+	TEXTYPE = 4
+	POS = 620 0 500
+	SIZE = 120 220
+	ORIGIN = 60 0
+END_BILLBOARDSET
+
+BILLBOARDSET
+	TEXTYPE = 4
+	POS = 610 0 400
+	SIZE = 120 240
+	ORIGIN = 60 0
+END_BILLBOARDSET
+
+BILLBOARDSET
+	TEXTYPE = 4
+	POS = 635 0 300
+	SIZE = 120 240
+	ORIGIN = 60 0
+END_BILLBOARDSET
+
+BILLBOARDSET
+	TEXTYPE = 4
+	POS = 600 0 200
+	SIZE = 140 260
+	ORIGIN = 70 0
+END_BILLBOARDSET
+
+BILLBOARDSET
+	TEXTYPE = 4
+	POS = 600 0 100
+	SIZE = 130 230
+	ORIGIN = 65 0
+END_BILLBOARDSET
+
+BILLBOARDSET
+	TEXTYPE = 4
+	POS = 620 0 0
+	SIZE = 120 240
+	ORIGIN = 60 0
+END_BILLBOARDSET
+
+BILLBOARDSET
+	TEXTYPE = 4
+	POS = 625 0 -100
+	SIZE = 110 230
+	ORIGIN = 55 0
+END_BILLBOARDSET
+
+BILLBOARDSET
+	TEXTYPE = 4
+	POS = 610 0 -200
+	SIZE = 130 250
+	ORIGIN = 65 0
+END_BILLBOARDSET
+
+BILLBOARDSET
+	TEXTYPE = 4
+	POS = 600 0 -300
+	SIZE = 120 240
+	ORIGIN = 60 0
+END_BILLBOARDSET
+
+BILLBOARDSET
+	TEXTYPE = 4
+	POS = 600 0 -400
+	SIZE = 130 260
+	ORIGIN = 65 0
+END_BILLBOARDSET
+
+BILLBOARDSET
+	TEXTYPE = 4
+	POS = 600 0 -500
+	SIZE = 120 240
+	ORIGIN = 60 0
+END_BILLBOARDSET
+
+#------------------
+# 林手前側
+#------------------
+BILLBOARDSET
+	TEXTYPE = 4
+	POS = 500 0 -620
+	SIZE = 120 220
+	ORIGIN = 60 0
+END_BILLBOARDSET
+
+BILLBOARDSET
+	TEXTYPE = 4
+	POS = 400 0 -610
+	SIZE = 120 240
+	ORIGIN = 60 0
+END_BILLBOARDSET
+
+BILLBOARDSET
+	TEXTYPE = 4
+	POS = 300 0 -635
+	SIZE = 120 240
+	ORIGIN = 60 0
+END_BILLBOARDSET
+
+BILLBOARDSET
+	TEXTYPE = 4
+	POS = 200 0 -600
+	SIZE = 140 260
+	ORIGIN = 70 0
+END_BILLBOARDSET
+
+BILLBOARDSET
+	TEXTYPE = 4
+	POS = 100 0 -600
+	SIZE = 130 230
+	ORIGIN = 65 0
+END_BILLBOARDSET
+
+BILLBOARDSET
+	TEXTYPE = 4
+	POS = 0 0 -620
+	SIZE = 120 240
+	ORIGIN = 60 0
+END_BILLBOARDSET
+
+BILLBOARDSET
+	TEXTYPE = 4
+	POS = -100 0 -625
+	SIZE = 110 230
+	ORIGIN = 55 0
+END_BILLBOARDSET
+
+BILLBOARDSET
+	TEXTYPE = 4
+	POS = -200 0 -610
+	SIZE = 130 250
+	ORIGIN = 65 0
+END_BILLBOARDSET
+
+BILLBOARDSET
+	TEXTYPE = 4
+	POS = -300 0 -600
+	SIZE = 120 240
+	ORIGIN = 60 0
+END_BILLBOARDSET
+
+BILLBOARDSET
+	TEXTYPE = 4
+	POS = -400 0 -600
+	SIZE = 130 260
+	ORIGIN = 65 0
+END_BILLBOARDSET
+
+BILLBOARDSET
+	TEXTYPE = 4
+	POS = -500 0 -600
+	SIZE = 120 240
+	ORIGIN = 60 0
+END_BILLBOARDSET
+
+#------------------
+# 林左側
+#------------------
+BILLBOARDSET
+	TEXTYPE = 4
+	POS = -620 0 -500
+	SIZE = 120 220
+	ORIGIN = 60 0
+END_BILLBOARDSET
+
+BILLBOARDSET
+	TEXTYPE = 4
+	POS = -610 0 -400
+	SIZE = 120 240
+	ORIGIN = 60 0
+END_BILLBOARDSET
+
+BILLBOARDSET
+	TEXTYPE = 4
+	POS = -635 0 -300
+	SIZE = 120 240
+	ORIGIN = 60 0
+END_BILLBOARDSET
+
+BILLBOARDSET
+	TEXTYPE = 4
+	POS = -600 0 -200
+	SIZE = 140 260
+	ORIGIN = 70 0
+END_BILLBOARDSET
+
+BILLBOARDSET
+	TEXTYPE = 4
+	POS = -600 0 -100
+	SIZE = 130 230
+	ORIGIN = 65 0
+END_BILLBOARDSET
+
+BILLBOARDSET
+	TEXTYPE = 4
+	POS = -620 0 0
+	SIZE = 120 240
+	ORIGIN = 60 0
+END_BILLBOARDSET
+
+BILLBOARDSET
+	TEXTYPE = 4
+	POS = -625 0 100
+	SIZE = 110 230
+	ORIGIN = 55 0
+END_BILLBOARDSET
+
+BILLBOARDSET
+	TEXTYPE = 4
+	POS = -610 0 200
+	SIZE = 130 250
+	ORIGIN = 65 0
+END_BILLBOARDSET
+
+BILLBOARDSET
+	TEXTYPE = 4
+	POS = -600 0 300
+	SIZE = 120 240
+	ORIGIN = 60 0
+END_BILLBOARDSET
+
+BILLBOARDSET
+	TEXTYPE = 4
+	POS = -600 0 400
+	SIZE = 130 260
+	ORIGIN = 65 0
+END_BILLBOARDSET
+
+BILLBOARDSET
+	TEXTYPE = 4
+	POS = -600 0 500
+	SIZE = 120 240
+	ORIGIN = 60 0
+END_BILLBOARDSET
+
+#------------------
+# 光
+#------------------
+BILLBOARDSET
+	TEXTYPE = 5
+	POS = 0 200 0
+	SIZE = 120 120
+	BLEND = 1
+	SHADOW = 0
+END_BILLBOARDSET
+#<<******************** [ここまでコメントアウト] ********************
+
+#------------------------------------------------------------------------------
+# プレイヤー情報
+#------------------------------------------------------------------------------
+PLAYERSET
+	MOTION_FILENAME = data/motion.txt
+	POS = 0 0 0
+	ROT = 0 0 0
+END_PLAYERSET
+
+END_SCRIPT		# この行は絶対消さないこと！

@@ -1,0 +1,10 @@
+Start,,,,,,,
+DefEnemyStat,0,0,32,48,80,2,20000
+DefEnemyStat,1,0,32,48,140,4,30000
+DefEnemyStat,2,0,32,48,200,8,50000
+DefEnemyStat,3,1,134,121,120,300,100000
+DefEnemyStat,4,1,180,180,60,400,100000
+DefEnemyStat,5,1,288,56,30,500,100000
+DefEnemyStat,6,1,344,144,300,600,100000
+DefEnemyStat,7,1,612,150,120,2000,100000
+End,,,,,,,
